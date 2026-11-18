@@ -7,7 +7,12 @@ Sitio: **https://campus.digitalhall.com.mx**
 ## Stack
 
 - React + Vite + Tailwind CSS
-- Firebase: Hosting (ya activo); Auth, Firestore, Storage y Cloud Functions en etapas siguientes
+- Firebase, proyecto **`biblioteca-digital-ub`**, compartido con la Biblioteca Digital (desde 2026-11-17) para que una sola cuenta sirva en los dos sitios:
+  - **Hosting:** sitio `hall-campus` (https://hall-campus.web.app).
+  - **Auth:** compartido con la biblioteca.
+  - **Firestore y Storage:** Campus usará **su propia base de Firestore con nombre** y **su propio bucket**, cada uno con sus reglas.
+  - ⚠️ **Nunca** desplegar desde este repo reglas a la base `(default)` ni al bucket por defecto: son de la biblioteca y se sobrescribirían.
+  - El proyecto viejo `digitalhall-campus` queda en desuso.
 - Rutas con `BrowserRouter` (Firebase Hosting reescribe todo a `index.html`)
 
 ## Desarrollo
@@ -37,7 +42,7 @@ npm run deploy    # build + publica en Firebase Hosting (requiere autorización)
 
 0. **Base**: portada y publicación. ← actual
 1. Cuentas: registro, aviso de privacidad, permiso de tutor, "Mi cuenta".
-2. Catálogo y compra: comprobante de depósito, panel de aprobación, lección gratis programable.
+2. Catálogo y compra: el alumno ve la CLABE, el monto y una referencia única, y sube su comprobante en Campus. Al dueño le llega un aviso por WhatsApp; él revisa su banco y aprueba a mano en el panel (nunca se da acceso solo por recibir la imagen). Lección gratis programable.
 3. Lección: video, PDF y ejercicios calificados en el servidor.
 4. Certificado: emisión, folio y `/verificar`.
 5. Pulido: correos con la marca, buscadores y enlace desde la biblioteca.
