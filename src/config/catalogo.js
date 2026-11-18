@@ -10,9 +10,9 @@ export const LINEAS = [
     descripcion: 'Programas completos por niveles. Cada nivel se compra por separado y tiene su propio certificado.',
     cursos: [
       {
-        id: 'logica-programacion',
-        titulo: 'Ruta de Lógica de Programación',
-        publico: 'Para estudiantes de prepa y universidad que empiezan a programar.',
+        id: 'logica',
+        titulo: 'Lógica para pensar mejor',
+        publico: 'Para cualquiera que quiera razonar con más claridad: del razonamiento paso a paso hasta programar en Python.',
         niveles: [
           { n: 1, titulo: 'Lógica y razonamiento', estado: 'proximamente' },
           { n: 2, titulo: 'Algoritmos y resolución de problemas', estado: 'planeado' },

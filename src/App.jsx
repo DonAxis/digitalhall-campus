@@ -3,6 +3,7 @@ import { Header } from './components/Header.jsx'
 import { Footer } from './components/Footer.jsx'
 import Inicio from './pages/Inicio.jsx'
 import NoEncontrado from './pages/NoEncontrado.jsx'
+import Avances from './pages/Avances.jsx'
 
 export default function App() {
   return (
@@ -11,6 +12,8 @@ export default function App() {
       <main className="flex-1">
         <Routes>
           <Route path="/" element={<Inicio />} />
+          <Route path="/avances" element={<Avances />} />
+          <Route path="/avances/:curso" element={<Avances />} />
           <Route path="*" element={<NoEncontrado />} />
         </Routes>
       </main>

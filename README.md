@@ -24,6 +24,13 @@ npm run build     # genera dist/
 npm run deploy    # build + publica en Firebase Hosting (requiere autorización)
 ```
 
+### Sala de avances (vista privada)
+
+`npm run avances` publica en un **canal de vista previa** de Firebase (dirección no listada, vence a los 30 días) lo más reciente de cada curso: videos, guías y ejercicios de prueba.
+- Qué se muestra se decide en `../administracion/avances.json`, en el repo privado de cursos. Solo funciona desde el taller.
+- El contenido se copia a `avances-build/`, que git ignora. **Nunca entra al repo público ni a la publicación normal.**
+- En el sitio normal, `/avances` responde "no existe".
+
 ## Dónde se cambia qué
 
 | Qué | Archivo |

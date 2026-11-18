@@ -5,3 +5,5 @@ dist/
 .env
 .env.*
 .DS_Store
+# Sala de avances: contenido de los cursos, nunca al repo público
+avances-build/

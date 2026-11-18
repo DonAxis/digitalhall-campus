@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "vite build && firebase deploy --only hosting"
+    "deploy": "vite build && firebase deploy --only hosting",
+    "avances": "node scripts/armar-avances.mjs && vite build && node -e \"require('fs').cpSync('avances-build/avances','dist/avances',{recursive:true})\" && firebase hosting:channel:deploy avances --expires 30d"
   },
   "dependencies": {
     "firebase": "^13.3.0",
