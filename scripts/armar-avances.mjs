@@ -58,7 +58,7 @@ const indice = {
         ejercicios: l.ejercicios ? copiar(l.ejercicios, `${base}/ejercicios.html`) : null,
       }
     })
-    return { id: c.id, titulo: c.titulo, subtitulo: c.subtitulo, presenta: c.presenta, extras, lecciones }
+    return { id: c.id, titulo: c.titulo, subtitulo: c.subtitulo, presenta: c.presenta, pagina: c.pagina ?? null, extras, lecciones }
   }),
 }
 
